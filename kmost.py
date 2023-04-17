@@ -15,6 +15,7 @@ url = 'https://drive.google.com/u/0/uc?id=1kaVM15rD9_O9HsvzrUKkIZ4R6ETUAdo4&expo
 zipname = 'data.zip'
 urllib.request.urlretrieve(url, zipname)
 
+
 # extract the files from the zip file
 with zipfile.ZipFile(zipname, 'r') as zip_ref:
     zip_ref.extractall(dir_path)
