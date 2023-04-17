@@ -1,106 +1,106 @@
 import psutil
 import time
-import os
 import string
+from collections import Counter
 
-# set the number of top words to find
-k = int(input("Enter the number of top words to find: "))
-dict_words = {}
-stop_words = []
-word = ""
-with open("stop_words.txt","r", encoding='utf-8-sig') as sw:
-    while True:
-        wordList = sw.read()
-        for words in wordList:
-            if(words != "\n"):
-                word += words
-            else:
-                stop_words.append(word)
-                word = ""
-        if not wordList:
-            break
+SIZE_5MB  = int(5  * 1024 * 1024 )# 5 MB
+SIZE_10MB = int(10 * 1024 * 1024 )# 10 MB
+SIZE_20MB = int(20 * 1024 * 1024 )# 20 MB
+SIZE_40MB = int(40 * 1024 * 1024 )# 40 MB
 
-# start the timer
-start_time = time.time()
+size_dict = {None: "None. Full file is being read at once" ,SIZE_5MB: '5MB', SIZE_10MB: '10MB', SIZE_20MB: '20MB', SIZE_40MB: '40MB'}
 
-with open("small_50MB_dataset.txt",'r') as file:
-    while True:
-        input = file.read()
-        if not input:
-            break
-        lists = input.split()
-        for data in lists:
-            # readData = data.translate(str.maketrans("","",string.punctuation)).lower()
-            readData = data
-            if readData and (readData not in stop_words):
-                if(readData not in dict_words.keys()):
-                    dict_words[readData] = 1
-                else:
-                    dict_words[readData] += 1
-print(f"\nTop frequent words:")
-print(f"{dict_words}")
-# while k > 0:
-#     if not dict_words:
-#         break
-#     max_key = max(dict_words.keys())
-#     if (k > 0):
-#         topWord = dict_words[max_key]
-#         print(f"{topWord}")
-#         k -= 1
-#         del dict_words[topWord]
-#     else:
-#         break
+def read_stop_words(file_path):
+    with open(file_path, "r", encoding="utf-8-sig") as sw:
+        stop_words = set()
+        for line in sw:
+            stop_words.update(line.strip().split(","))
+        return stop_words
+
+def read_datafile(file_path, stop_words, chunk_size=None):
+    word_counts = Counter()
+    with open(file_path, "r") as file:
+        if chunk_size:
+            while True:
+                chunk = file.read(chunk_size)
+                if not chunk:
+                    break
+
+                # process the chunk
+                for line in chunk.splitlines():
+                    for word in line.strip().split():
+                        # remove punctuation and convert to lowercase
+                        word = word.translate(str.maketrans("", "", string.punctuation)).lower()
+
+                        if word and word not in stop_words:
+                            word_counts[word] += 1
+        else:
+            for line in file:
+                for word in line.strip().split():
+                    # remove punctuation and convert to lowercase
+                    word = word.translate(str.maketrans("", "", string.punctuation)).lower()
+
+                    if word and word not in stop_words:
+                        word_counts[word] += 1
+    return word_counts
+
+# def count_words(file_path, stop_words, chunk_size=None):
+#     return 
+
+def print_top_words(word_counts, k):
+    # get the top k words from the Counter
+    top_words = word_counts.most_common(k)
+
+    # print the top k wordsprint("\nTop frequent words:")
+    print("Word".ljust(20) + "Count")
+    for word, count in top_words:
+        print("{:<20} {}".format(word, count))
 
 
-# loop through all zip files
-# for filename in zip_files:
-#     print(f"Processing {filename}")
-    
-#     # initialize a dictionary to store the word count
-#     word_count = {}
+def print_statistics(start_time):
+    # calculate the running time
+    end_time = time.time()
+    running_time = end_time - start_time
 
-#     # start the timer
-#     start_time = time.time()
+    # print the performance metrics
+    process = psutil.Process()
+    memory_usage = process.memory_info().rss
+    cpu_utilization = process.cpu_percent()
+    print(f"\n\nRunning time: {running_time:.2f} seconds")
+    print(f"\nMemory usage: {memory_usage / 1024 / 1024:.2f} MB")
+    print(f"\nCPU utilization: {cpu_utilization:.2f}%")
+    print("------\n")
 
-#     # read the input file in chunks and process each chunk
-#     with open(os.path.join(dir_path, filename), "r") as f:
-#         while True:
-#             # read a chunk of data from the file
-#             data = f.read(chunk_size)
-#             if not data:
-#                 break
 
-#             # process the chunk
-#             for word in data.split():
-#                 # remove punctuations and convert to lowercase
-#                 word = word.translate(str.maketrans("", "", string.punctuation)).lower()
+def process_data(filename, stop_words,top_k, chunk_size=None, ):
+    print(f"\n\n******Chunk Size : {size_dict[chunk_size]} ********** \n")
+    start_time = time.time()
 
-#                 # ignore stop words and empty words
-#                 if word in stopwords or not word:
-#                     continue
+    # count words from data file
+    word_counts = read_datafile(filename, stop_words, chunk_size)
 
-#                 # update the word count
-#                 if word in word_count:
-#                     word_count[word] += 1
-#                 else:
-#                     word_count[word] = 1
+    # print the top k words
+    print_top_words(word_counts, top_k)
 
-#     # get the top k words from the dictionary
-#     top_words = heapq.nlargest(k, word_count.items(), key=lambda x: x[1])
+    # print the performance metrics
+    print_statistics(start_time)
 
-#     # print the top k words
-#     for word, count in top_words:
-#         print(word, count)
 
-# calculate the running time
-end_time = time.time()
-running_time = end_time - start_time
+def main():
+    # set the number of top words to find
+    k = int(input("Enter the number of top words to find: "))
+    # read stop words from file
+    stop_words = read_stop_words("stop_words.txt")
 
-# print the performance metrics
-process = psutil.Process()
-memory_usage = process.memory_info().rss
-cpu_utilization = process.cpu_percent()
-print(f"Running time: {running_time:.2f} seconds")
-print(f"\nMemory usage: {memory_usage / 1024 / 1024:.2f} MB")
-print(f"\nCPU utilization: {cpu_utilization:.2f}%")
-print("------\n")
+    # start the timer
+    # global start_time
+    # process the data with different chunk sizes
+    process_data("small_50MB_dataset.txt", stop_words, k)
+    process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_5MB)
+    process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_10MB)
+    process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_20MB)
+    process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_40MB)
+
+
+if __name__ == '__main__':
+    main()
