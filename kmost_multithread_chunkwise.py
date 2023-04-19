@@ -2,6 +2,8 @@ import psutil
 import time
 import string
 from collections import Counter
+import threading
+import os
 
 SIZE_5MB  = int(5  * 1024 * 1024 )# 5 MB
 SIZE_10MB = int(10 * 1024 * 1024 )# 10 MB
@@ -23,41 +25,29 @@ def read_stop_words(file_path):
             stop_words.update(line.strip().split(","))
         return stop_words
 
-def read_datafile(file_path, stop_words, chunk_size=None):
-    word_counts = Counter()
+def read_chunk(file_path, chunk_start, chunk_size):
     with open(file_path, "r") as file:
-        if chunk_size:
-            while True:
-                chunk = file.read(chunk_size)
-                if not chunk:
-                    break
+        file.seek(chunk_start)
+        chunk = file.read(chunk_size)
+    return chunk
 
-                # process the chunk
-                for line in chunk.splitlines():
-                    for word in line.strip().split():
-                        # remove punctuation and convert to lowercase
-                        word = word.translate(str.maketrans("", "", string.punctuation)).lower()
+def process_chunk(chunk, stop_words):
+    word_counts = Counter()
+    for line in chunk.splitlines():
+        for word in line.strip().split():
+            # remove punctuation and convert to lowercase
+            word = word.translate(str.maketrans("", "", string.punctuation)).lower()
 
-                        if word and word not in stop_words:
-                            word_counts[word] += 1
-        else:
-            for line in file:
-                for word in line.strip().split():
-                    # remove punctuation and convert to lowercase
-                    word = word.translate(str.maketrans("", "", string.punctuation)).lower()
-
-                    if word and word not in stop_words:
-                        word_counts[word] += 1
+            if word and word not in stop_words:
+                word_counts[word] += 1
     return word_counts
-
-# def count_words(file_path, stop_words, chunk_size=None):
-#     return 
 
 def print_top_words(word_counts, k):
     # get the top k words from the Counter
     top_words = word_counts.most_common(k)
 
-    # print the top k wordsprint("\nTop frequent words:")
+    # print the top k words
+    print(f"\nTop {k} frequent words:")
     print("Word".ljust(20) + "Count")
     for word, count in top_words:
         print("{:<20} {}".format(word, count))
@@ -78,35 +68,60 @@ def print_statistics(start_time):
     print("------\n")
 
 
-def process_data(filename, stop_words,top_k, chunk_size=None, ):
+def process_data(filename, stop_words, k, chunk_size=None):
     print(f"\n\n******Chunk Size : {size_dict[chunk_size]} ********** \n")
     start_time = time.time()
 
-    # count words from data file
-    word_counts = read_datafile(filename, stop_words, chunk_size)
+    # get the file size
+    file_size = os.path.getsize(filename)
 
-    # print the top k words
-    print_top_words(word_counts, top_k)
+    # create a list of chunks
+    chunks = []
+    offset = 0
+    while offset < file_size:
+        chunk_end = min(offset + chunk_size, file_size)
+        chunks.append((offset, chunk_end))
+        offset = chunk_end
 
-    # print the performance metrics
+    # process each chunk in a separate thread
+    threads = []
+    word_counts = Counter()
+    for chunk_start, chunk_end in chunks:
+        chunk_thread = threading.Thread(target=lambda: word_counts.update(process_chunk(read_chunk(filename, chunk_start, chunk_size), stop_words)))
+        chunk_thread.start()
+        threads.append(chunk_thread)
+
+    # wait for all threads to finish
+    for thread in threads:
+        thread.join()
+    
+    # print the top k frequent words
+    print_top_words(word_counts, k)
+
+    # print the performance statistics
     print_statistics(start_time)
+
 
 
 def main():
     # set the number of top words to find
     k = int(input("Enter the number of top words to find: "))
     filename = FILENAME_50MB
-    # read stop words from file
+
+    # read stop words
     stop_words = read_stop_words(FILE_STOP_WORDS)
 
-    # start the timer
-    # global start_time
-    # process the data with different chunk sizes
-    # process_data(filename, stop_words, k)
-    # process_data(filename, stop_words, k, chunk_size=SIZE_5MB)
+    # process the file in chunks of 5MB
+    process_data(filename, stop_words, k, chunk_size=SIZE_5MB)
+
+    # # process the file in chunks of 10MB
     process_data(filename, stop_words, k, chunk_size=SIZE_10MB)
-    # process_data(filename, stop_words, k, chunk_size=SIZE_20MB)
-    # process_data(filename, stop_words, k, chunk_size=SIZE_40MB)
+
+    # # process the file in chunks of 20MB
+    process_data(filename, stop_words, k, chunk_size=SIZE_20MB)
+
+    # # process the file in chunks of 40MB
+    process_data(filename, stop_words, k, chunk_size=SIZE_40MB)
 
 
 if __name__ == '__main__':
