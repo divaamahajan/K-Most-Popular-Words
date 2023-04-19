@@ -1,6 +1,5 @@
 import psutil
 import time
-from collections import Counter
 import re
 
 SIZE_5MB  = int(5  * 1024 * 1024 )# 5 MB
