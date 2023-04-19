@@ -30,15 +30,26 @@ with open("small_50MB_dataset.txt",'r') as file:
             break
         lists = input.split()
         for data in lists:
-            # readData = data.translate(str.maketrans("","",string.punctuation)).lower()
-            readData = data
+            readData = data.translate(str.maketrans("","",string.punctuation)).lower()
             if readData and (readData not in stop_words):
                 if(readData not in dict_words.keys()):
                     dict_words[readData] = 1
                 else:
                     dict_words[readData] += 1
+                count = dict_words[readData]
+
 print(f"\nTop frequent words:")
-print(f"{dict_words}")
+
+delete_key = ""
+while k > 0:
+    max_key = max(dict_words.values())
+    for key,v in dict_words.items():
+        if v == max_key:
+            print(f"{key}")
+            k -= 1
+            delete_key = key
+            break
+    del dict_words[delete_key]
 
 # calculate the running time
 end_time = time.time()
