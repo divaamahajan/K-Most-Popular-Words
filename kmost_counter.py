@@ -1,7 +1,7 @@
 import psutil
 import time
-import string
 from collections import Counter
+import re
 
 SIZE_5MB  = int(5  * 1024 * 1024 )# 5 MB
 SIZE_10MB = int(10 * 1024 * 1024 )# 10 MB
@@ -18,6 +18,7 @@ size_dict = {None: "None. Full file is being read at once" ,SIZE_5MB: '5MB', SIZ
 
 def read_stop_words(file_path):
     with open(file_path, "r", encoding="utf-8-sig") as sw:
+
         stop_words = set()
         for line in sw:
             stop_words.update(line.strip().split(","))
@@ -25,7 +26,7 @@ def read_stop_words(file_path):
 
 def read_datafile(file_path, stop_words, chunk_size=None):
     word_counts = Counter()
-    with open(file_path, "r") as file:
+    with open(file_path, "r", encoding="utf-8-sig") as file:
         if chunk_size:
             while True:
                 chunk = file.read(chunk_size)
@@ -34,24 +35,15 @@ def read_datafile(file_path, stop_words, chunk_size=None):
 
                 # process the chunk
                 for line in chunk.splitlines():
-                    for word in line.strip().split():
-                        # remove punctuation and convert to lowercase
-                        word = word.translate(str.maketrans("", "", string.punctuation)).lower()
-
+                    for word in re.findall(r"\w+", line.lower()):
                         if word and word not in stop_words:
                             word_counts[word] += 1
         else:
             for line in file:
-                for word in line.strip().split():
-                    # remove punctuation and convert to lowercase
-                    word = word.translate(str.maketrans("", "", string.punctuation)).lower()
-
+                for word in re.findall(r"\w+", line.lower()):
                     if word and word not in stop_words:
                         word_counts[word] += 1
     return word_counts
-
-# def count_words(file_path, stop_words, chunk_size=None):
-#     return 
 
 def print_top_words(word_counts, k):
     # get the top k words from the Counter

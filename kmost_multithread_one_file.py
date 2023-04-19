@@ -1,6 +1,6 @@
 import psutil
 import time
-import string
+import re
 from collections import Counter
 import threading
 import sys
@@ -22,10 +22,7 @@ def count_words(line):
     global word_counts
     global lock
     try:
-        for word in line.strip().split():
-            # remove punctuation and convert to lowercase
-            word = word.translate(str.maketrans("", "", string.punctuation)).lower()
-
+        for word in re.findall(r"\w+", line.lower()):
             if word and word not in stop_words:
                 with lock:
                     word_counts[word] += 1
