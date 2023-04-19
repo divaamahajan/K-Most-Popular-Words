@@ -96,10 +96,10 @@ def main():
     # global start_time
     # process the data with different chunk sizes
     process_data("small_50MB_dataset.txt", stop_words, k)
-    process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_5MB)
-    process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_10MB)
-    process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_20MB)
-    process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_40MB)
+    # process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_5MB)
+    # process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_10MB)
+    # process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_20MB)
+    # process_data("small_50MB_dataset.txt", stop_words, k, chunk_size=SIZE_40MB)
 
 
 if __name__ == '__main__':
