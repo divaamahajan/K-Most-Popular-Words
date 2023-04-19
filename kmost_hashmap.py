@@ -1,65 +1,81 @@
 import psutil
 import time
-import os
-import string
+from collections import Counter
+import re
 
-# set the number of top words to find
-k = int(input("Enter the number of top words to find: "))
-dict_words = {}
-stop_words = []
-word = ""
-with open("stop_words.txt","r", encoding='utf-8-sig') as sw:
-    while True:
-        wordList = sw.read()
-        for words in wordList:
-            if(words != "\n"):
-                word += words
-            else:
-                stop_words.append(word)
-                word = ""
-        if not wordList:
-            break
+SIZE_5MB  = int(5  * 1024 * 1024 )# 5 MB
+SIZE_10MB = int(10 * 1024 * 1024 )# 10 MB
+SIZE_20MB = int(20 * 1024 * 1024 )# 20 MB
+SIZE_40MB = int(40 * 1024 * 1024 )# 40 MB
 
-# start the timer
-start_time = time.time()
+FILENAME_50MB = "small_50MB_dataset.txt"
+FILENAME_300MB = "data_300MB.txt"
+FILENAME_2_5GB = "data_2.5GB.txt"
+FILENAME_16GB = "data_16GB.txt"
+FILE_STOP_WORDS = "stop_words.txt"
 
-with open("small_50MB_dataset.txt",'r') as file:
-    while True:
-        input = file.read()
-        if not input:
-            break
-        lists = input.split()
-        for data in lists:
-            readData = data.translate(str.maketrans("","",string.punctuation)).lower()
-            if readData and (readData not in stop_words):
-                if(readData not in dict_words.keys()):
-                    dict_words[readData] = 1
-                else:
-                    dict_words[readData] += 1
-                count = dict_words[readData]
+def read_stop_words(file_path):
+    with open(file_path, "r", encoding="utf-8-sig") as sw:
 
-print(f"\nTop frequent words:")
+        stop_words = set()
+        for line in sw:
+            stop_words.update(line.strip().split(","))
+        return stop_words
 
-delete_key = ""
-while k > 0:
-    max_key = max(dict_words.values())
-    for key,v in dict_words.items():
-        if v == max_key:
-            print(f"{key}")
-            k -= 1
-            delete_key = key
-            break
-    del dict_words[delete_key]
 
-# calculate the running time
-end_time = time.time()
-running_time = end_time - start_time
+def read_datafile(file_path, stop_words):
+    word_counts = dict()
+    with open(file_path, "r", encoding="utf-8-sig") as file:
+        for line in file:
+            for word in re.findall(r"\w+", line.lower()):
+                if word and word not in stop_words:
+                    word_counts[word] = word_counts.get(word,0) + 1
+    return word_counts
 
-# print the performance metrics
-process = psutil.Process()
-memory_usage = process.memory_info().rss
-cpu_utilization = process.cpu_percent()
-print(f"Running time: {running_time:.2f} seconds")
-print(f"\nMemory usage: {memory_usage / 1024 / 1024:.2f} MB")
-print(f"\nCPU utilization: {cpu_utilization:.2f}%")
-print("------\n")
+
+def print_top_words(word_counts, k):
+    # get the top k words from the dictionary
+    top_words = sorted(word_counts, key=word_counts.get, reverse=True)[:k]
+    
+    # print the top k words
+    print("\nTop frequent words:")
+    print("Word".ljust(20) + "Count")
+    for word in top_words:
+        count = word_counts[word]
+        print("{:<20} {}".format(word, count))
+
+
+
+def print_statistics(start_time):
+    # calculate the running time
+    end_time = time.time()
+    running_time = end_time - start_time
+
+    # print the performance metrics
+    process = psutil.Process()
+    memory_usage = process.memory_info().rss
+    cpu_utilization = process.cpu_percent()
+    print(f"\n\nRunning time: {running_time:.2f} seconds")
+    print(f"\nMemory usage: {memory_usage / 1024 / 1024:.2f} MB")
+    print(f"\nCPU utilization: {cpu_utilization:.2f}%")
+    print("------\n")
+    
+def main():
+    # set the number of top words to find
+    k = int(input("Enter the number of top words to find: "))
+    filename = FILENAME_50MB
+    # read stop words from file
+    stop_words = read_stop_words(FILE_STOP_WORDS)
+    start_time = time.time()
+
+    # count words from data file
+    word_counts = read_datafile(filename, stop_words)
+
+    # print the top k words
+    print_top_words(word_counts, k)
+
+    # print the performance metrics
+    print_statistics(start_time)
+
+if __name__ == '__main__':
+    main()
