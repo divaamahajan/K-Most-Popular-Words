@@ -39,7 +39,8 @@ def read_stop_words(file_path):
 def read_datafile(filename, stop_words, k):
     # Create a Counter object to count the frequency of words
     word_counts = Counter()
-    with open(filename, "r", encoding="utf-8-sig") as f:
+    filepath = "/Users/rushshah/SCU/BigData/" + filename
+    with open(filepath, "r", encoding="utf-8-sig") as f:
         for line in f:
             # Iterate over each line in the file
             for word in re.findall(r"\w+", line.lower()):
@@ -55,7 +56,7 @@ def print_top_words(word_counts):
     global word_results
     # Print the header for the top frequent words list
     word_results += "\n\nTop frequent words:"
-    word_results += "\n\nWord".ljust(21) + "Count"
+    word_results += "\n\nWord".ljust(23) + "Count"
     # Iterate over each word and its count in the word_counts list and print them
     for word, count in word_counts:
         word_results += "\n{:<20} {}".format(word, count)
@@ -103,7 +104,7 @@ def print_statistics(filename,start_time):
 def main():
     # set the number of top words to find
     k = int(input("Enter the number of top words to find: "))
-    filename = FILENAME_50MB
+    filename = FILENAME_16GB
     # read stop words from file
     stop_words = read_stop_words(FILE_STOP_WORDS)
 
