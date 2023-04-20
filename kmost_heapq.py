@@ -4,6 +4,8 @@ import re
 import sys
 import time
 import psutil
+import os
+import datetime
 
 from collections import Counter
 
@@ -11,7 +13,19 @@ FILENAME_50MB = "small_50MB_dataset.txt"
 FILENAME_300MB = "data_300MB.txt"
 FILENAME_2_5GB = "data_2.5GB.txt"
 FILENAME_16GB = "data_16GB.txt"
-FILE_STOP_WORDS = "stop_words.txt"# Define function to read stop words from a file
+FILE_STOP_WORDS = "stop_words.txt"
+
+word_results = ""
+
+def generate_logs(result):
+    current_file = os.path.basename(__file__).split(".")[0]
+    direc = os.getcwd()
+    log_file = "log_" + current_file + ".txt"
+    with open(os.path.join(direc,log_file), 'a') as logs:
+        logs.write(result)
+        print(f"\nLogs appended")
+
+# Define function to read stop words from a file
 def read_stop_words(file_path):
     with open(file_path, "r", encoding="utf-8-sig") as sw:
         stop_words = set()
@@ -38,26 +52,51 @@ def read_datafile(filename, stop_words, k):
 
 # Define function to print the top words and their frequency
 def print_top_words(word_counts):
+    global word_results
     # Print the header for the top frequent words list
-    print("\nTop frequent words:")
-    print("Word".ljust(20) + "Count")
+    word_results += "\n\nTop frequent words:"
+    word_results += "\n\nWord".ljust(21) + "Count"
     # Iterate over each word and its count in the word_counts list and print them
     for word, count in word_counts:
-        print("{:<20} {}".format(word, count))
+        word_results += "\n{:<20} {}".format(word, count)
 
 
-def print_statistics(start_time):
+def print_statistics(filename,start_time):
+    # # calculate the running time
+    # end_time = time.time()
+    # running_time = end_time - start_time
+
+    # # print the performance metrics
+    # memory_usage = sys.getsizeof(heapq)
+    # cpu_utilization = psutil.cpu_percent()
+    # print(f"\n\nRunning time: {running_time:.2f} seconds")
+    # print(f"\nMemory usage: {memory_usage / 1024 / 1024:.2f} MB")
+    # print(f"\nCPU utilization: {cpu_utilization:.2f}%")
+    # print("------\n")
+
+    global word_results
     # calculate the running time
     end_time = time.time()
     running_time = end_time - start_time
 
     # print the performance metrics
-    memory_usage = sys.getsizeof(heapq)
-    cpu_utilization = psutil.cpu_percent()
-    print(f"\n\nRunning time: {running_time:.2f} seconds")
-    print(f"\nMemory usage: {memory_usage / 1024 / 1024:.2f} MB")
-    print(f"\nCPU utilization: {cpu_utilization:.2f}%")
-    print("------\n")
+    process = psutil.Process()
+    memory_usage = process.memory_info().rss
+    cpu_utilization = process.cpu_percent()
+    # file_size = filename.split("_")[-1]
+    results = f"**************************************************************\
+                \nOutput logs\
+                \nFile name:\t{filename}\
+                \nDate:\t\t{datetime.datetime.now()}\
+                \n**************************************************************\n"
+    results += word_results
+    results += f"\n\n**************************************************************"
+    results += f"\n\nRunning time:\t\t{running_time:.2f} seconds\
+                \nMemory usage:\t\t{memory_usage / 1024 / 1024:.2f} MB\
+                \nCPU utilization:\t{cpu_utilization:.2f} %\n"
+    results += f'\n************************** END *******************************\n\n'
+    print(f"{results}")
+    generate_logs(results)
 
 
 # Driver program to test above functions
@@ -73,7 +112,7 @@ def main():
     most_frequent_words = read_datafile(filename, stop_words, k)
     print(type(most_frequent_words))
     print_top_words(most_frequent_words)
-    print_statistics(start_time)
+    print_statistics(filename,start_time)
 
 
 if __name__ == '__main__':
