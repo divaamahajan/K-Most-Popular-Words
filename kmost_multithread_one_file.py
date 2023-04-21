@@ -7,6 +7,12 @@ import sys
 import os
 import datetime
 
+FILENAME_50MB = "small_50MB_dataset.txt"
+FILENAME_300MB = "data_300MB.txt"
+FILENAME_2_5GB = "data_2.5GB.txt"
+FILENAME_16GB = "data_16GB.txt"
+FILE_STOP_WORDS = "stop_words.txt"
+
 stop_words = set()
 lock = threading.Lock()
 word_counts = Counter()
@@ -29,7 +35,7 @@ def read_stop_words(file_path):
             stop_words.update(line.strip().split(","))
         return stop_words
 
-def count_words(line):
+def count_words(line,stop_words):
     global word_counts
     global lock
     try:
@@ -43,14 +49,14 @@ def count_words(line):
         sys.exit()
 
 
-def read_datafile(file_path, stop_words, chunk_size=None):
+def read_datafile(file_name, stop_words, chunk_size=None):
     threads = []
+    file_path = "/Users/rushshah/SCU/BigData/" + file_name
     with open(file_path, "r") as file:
         for line in file:
-            thread = threading.Thread(target=count_words, args=(line,))
+            thread = threading.Thread(target=count_words, args=(line,stop_words,))
             threads.append(thread)
             thread.start()
-
     
     for th in threads:
         th.join()
@@ -109,7 +115,7 @@ def print_statistics(filename, start_time):
     generate_logs(results)
 
 
-def process_data(filename, stop_words,top_k, chunk_size=None, ):
+def process_data(filename, stop_words,top_k, chunk_size=None,):
     print(f"\n\n******Chunk Size : {size_dict[chunk_size]} ********** \n")
     start_time = time.time()
 
@@ -132,7 +138,7 @@ def main():
     # start the timer
     # global start_time
     # process the data with different chunk sizes
-    process_data("small_50MB_dataset.txt", stop_words, k)
+    process_data(FILENAME_300MB, stop_words, k)
 
 
 
