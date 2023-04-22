@@ -25,7 +25,8 @@ def process_data(filename, stop_words, k, chunk_size=None):
     global word_results
     print_size = size_dict[chunk_size]
     # get the file size
-    file_size = os.path.getsize(filename)
+    file_name = "/Users/rushshah/SCU/BigData/" + filename
+    file_size = os.path.getsize(file_name)
     if not chunk_size:
         chunk_size = file_size // (cpu_count() * 2)
         # Convert chunk_size to MB and GB
@@ -50,7 +51,7 @@ def process_data(filename, stop_words, k, chunk_size=None):
     # process each chunk using multiprocessing Pool
     pool = Pool(processes=cpu_count())
     word_counts = defaultdict(int)
-    for chunk_word_counts in pool.imap_unordered(process_chunk, [(read_chunk(filename, chunk_start, chunk_size), stop_words) for chunk_start, chunk_end in chunks]):
+    for chunk_word_counts in pool.imap_unordered(process_chunk, [(read_chunk(file_name, chunk_start, chunk_size), stop_words) for chunk_start, chunk_end in chunks]):
         for word, count in chunk_word_counts.items():
             word_counts[word] += count
     
@@ -131,7 +132,7 @@ def print_statistics(filename, start_time):
 def main():
     # set the number of top words to find
     k = int(input("Enter the number of top words to find: "))
-    filename = FILENAME_50MB
+    filename = FILENAME_16GB
 
     # read stop words
     stop_words = read_stop_words(FILE_STOP_WORDS)

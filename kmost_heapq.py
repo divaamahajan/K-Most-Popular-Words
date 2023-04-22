@@ -6,14 +6,21 @@ import time
 import psutil
 import os
 import datetime
+from collections import Counter, defaultdict
+from multiprocessing import Pool, cpu_count
 
-from collections import Counter
+SIZE_5MB  = int(5  * 1024 * 1024 )# 5 MB
+SIZE_10MB = int(10 * 1024 * 1024 )# 10 MB
+SIZE_20MB = int(20 * 1024 * 1024 )# 20 MB
+SIZE_40MB = int(40 * 1024 * 1024 )# 40 MB
 
 FILENAME_50MB = "small_50MB_dataset.txt"
 FILENAME_300MB = "data_300MB.txt"
 FILENAME_2_5GB = "data_2.5GB.txt"
 FILENAME_16GB = "data_16GB.txt"
 FILE_STOP_WORDS = "stop_words.txt"
+
+size_dict = {None: "None. Full file is being read at once" ,SIZE_5MB: '5MB', SIZE_10MB: '10MB', SIZE_20MB: '20MB', SIZE_40MB: '40MB'}
 
 word_results = ""
 
@@ -35,6 +42,68 @@ def read_stop_words(file_path):
         # Return the set of stop words
         return stop_words
 
+def process_chunk(args):
+    chunk, stop_words = args
+    word_counts = defaultdict(int)
+    for line in chunk.splitlines():
+        for word in re.findall(r"\w+", line.lower()):
+            if word and word not in stop_words:
+                word_counts[word] += 1
+    return word_counts
+
+def process_chunk(args):
+    chunk, stop_words = args
+    word_counts = defaultdict(int)
+    for line in chunk.splitlines():
+        for word in re.findall(r"\w+", line.lower()):
+            if word and word not in stop_words:
+                word_counts[word] += 1
+    return word_counts
+
+
+def process_data(filename, stop_words, k, chunk_size=None):
+    global word_results
+    print_size = size_dict[chunk_size]
+    # get the file size
+    file_name = "/Users/rushshah/SCU/BigData/" + filename
+    file_size = os.path.getsize(file_name)
+    if not chunk_size:
+        chunk_size = file_size // (cpu_count() * 2)
+        # Convert chunk_size to MB and GB
+        chunk_size_MB = chunk_size / (1024 * 1024)
+        chunk_size_GB = chunk_size / (1024 * 1024 * 1024)
+        file_size_MB = file_size / (1024 * 1024)
+        file_size_GB = file_size / (1024 * 1024 * 1024)
+        print_size = f"{chunk_size_MB:.2f} MB or {chunk_size_GB:.2f} GB Decided by CPU \n\t file size {file_size_MB:.2f} MB or {file_size_GB:.2f} GB /( CPU count {cpu_count()} * 2)"
+
+    # create a list of chunks
+    chunks = []
+    offset = 0
+
+    word_results += f"\n\n***************** Chunk Size : {print_size} ******************* \n"
+    start_time = time.time()
+
+    while offset < file_size:
+        chunk_end = min(offset + chunk_size, file_size)
+        chunks.append((offset, chunk_end))
+        offset = chunk_end
+
+    # process each chunk using multiprocessing Pool
+    pool = Pool(processes=cpu_count())
+    word_counts = defaultdict(int)
+    for chunk_word_counts in pool.imap_unordered(process_chunk, [(read_chunk(file_name, chunk_start, chunk_size), stop_words) for chunk_start, chunk_end in chunks]):
+        for word, count in chunk_word_counts.items():
+            word_counts[word] += count
+    
+    return heapq.nlargest(k, word_counts.items(), key=lambda x: x[1])
+
+
+def read_chunk(file_path, chunk_start, chunk_size):
+    with open(file_path, "r") as file:
+        file.seek(chunk_start)
+        chunk = file.read(chunk_size)
+    return chunk
+ 
 # Define function to read a data file and return the top k words in it
 def read_datafile(filename, stop_words, k):
     # Create a Counter object to count the frequency of words
@@ -110,7 +179,13 @@ def main():
 
     start_time = time.time()
 
-    most_frequent_words = read_datafile(filename, stop_words, k)
+    # most_frequent_words = read_datafile(filename, stop_words, k)
+    # most_frequent_words = process_data(filename,stop_words,k)
+    # most_frequent_words = process_data(filename,stop_words,k,SIZE_5MB)
+    # most_frequent_words = process_data(filename,stop_words,k,SIZE_10MB)
+    # most_frequent_words = process_data(filename,stop_words,k,SIZE_20MB)
+    most_frequent_words = process_data(filename,stop_words,k,SIZE_40MB)
+
     print(type(most_frequent_words))
     print_top_words(most_frequent_words)
     print_statistics(filename,start_time)
