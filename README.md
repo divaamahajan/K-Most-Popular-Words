@@ -14,6 +14,22 @@ Initially, the code has been tested on a smaller dataset provided at [small_data
 
 This report presents a detailed analysis of why a particular algorithm or data structure has been used to solve this problem. The report also covers the presentation of the results obtained from the execution of the code and the performance metrics calculated.
 
+## System Configurations
+Processor: processor used.
+
+Cores: number of cores.
+
+Memory: RAM available on the system.
+
+Storage Type: The type and size of the storage device used
+
+Sorage size available:  available disk space.
+
+Operating System: operating system and version
+
+Programming Lagage: Python3
+
+Compiler and Runtime Environment: Python 3 interpreter
 
 ## Experimental Process:
 
