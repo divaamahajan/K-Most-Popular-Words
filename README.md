@@ -80,4 +80,5 @@ However, this approach is not efficient for larger datasets as too many threads 
 
 In summary, this approach aims to optimize the multithreading approach used in Approach 6 by creating a separate thread for each line in the data file and aggregating the local counters of all threads. However, this approach is not efficient for larger datasets due to the high CPU utilization and slow performance resulting from the use of too many threads.
 
+## Evaluation
 To evaluate the performance of these approaches, we measured various metrics such as running time, speedup, CPU utilization, and memory usage and mainted detailed [logs](https://github.com/divaamahajan/K-Most-Popular-Words/tree/main/logs). Based on the analysis of the results, we identified the most efficient approach. We also provided a detailed analysis of why we chose a particular algorithm or a particular data structure to solve this problem, considering the trade-offs between time complexity, space complexity, and parallelism. Overall, we aimed to achieve the best performance possible while minimizing the execution time of our code.
