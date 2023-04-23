@@ -15,12 +15,12 @@ Initially, the code has been tested on a smaller dataset provided at [small_data
 This report presents a detailed analysis of why a particular algorithm or data structure has been used to solve this problem. The report also covers the presentation of the results obtained from the execution of the code and the performance metrics calculated.
 
 ## System Configurations
-* **Processor**: processor used.
-* **Cores**: number of cores.
-* **Memory**: RAM available on the system.
-* **Storage Type**: Type and size of the storage device used
+* **Processor**: M2 processor used.
+* **Cores**: 10 number of cores.
+* **Memory**: 16 GB RAM available on the system.
+* **Storage Type**: SSd storage qith 512 GB storage space
 * **Sorage size available**: Available disk space.
-* **Operating System**: operating system and version
+* **Operating System**: macOS 16.1
 * **Programming Language**: Python3
 * **Compiler and Runtime Environment**: Python 3 interpreter
 
