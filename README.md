@@ -25,19 +25,19 @@ We began by reading the data in a single thread and storing the word count in a 
 ### Approach 2: [Counter Chunk Singlethread](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/counter_chunks_singlethread.py)
 Next, we read the data in chunks in a single thread and stored the word count in a counter. We used the most_common function of the counter to return the top K words. This approach was more memory-efficient as it didn't require storing the entire dataset in memory. It also eliminated the need for sorting the entire dataset.
 
-### Approach 3: [Counter Heapq Singlethread] (https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/counter_heapq_singlethread.py)
+### Approach 3: [Counter Heapq Singlethread](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/counter_heapq_singlethread.py)
 We then read the data in a single thread and stored the word count in the counter. We used the heapq.nlargest function to return the top K words. This approach was similar to the previous one, but we used heapq.nlargest to find the top K words instead of the most_common function.
 
-### Approach 4: [Defaultdict Chunks Heapq Singlethread] (https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/defaultdict_chunks%20heapq_singlethread.py)
+### Approach 4: [Defaultdict Chunks Heapq Singlethread](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/defaultdict_chunks%20heapq_singlethread.py)
 We read the data in chunks in a single thread and stored the word count in the defaultdict. We used the heapq.nlargest function to return the top K words. This approach was similar to the previous one, but we used defaultdict instead of counter.
 
-### Approach 5: [Defaultdict Chunks Multiprocess] (https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/defaultdict_chunks_multiprocess.py)
+### Approach 5: [Defaultdict Chunks Multiprocess](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/defaultdict_chunks_multiprocess.py)
 We read the data in chunks using multiprocessing and stored the word count in the defaultdict. We sorted the frequency of the words in reverse and returned the top K words. This approach leverages multiprocessing to speed up the computation for larger datasets.
 
-### Approach 6: [Counter Chunk Multithread] (https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/counter_chunks_multithread.py)
+### Approach 6: [Counter Chunk Multithread](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/counter_chunks_multithread.py)
 We read the data in chunks using multithreading, where each thread was reading a chunk. We stored the word count in the counter and used the most_common function to return the top K words. This approach leverages multithreading to speed up the computation for larger datasets.
 
-### Approach 7: [Counter Lines Multithread] (https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/counter_lines_multithread.py)
+### Approach 7: [Counter Lines Multithread](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/counter_lines_multithread.py)
 Finally, we read the data in a multithread, where each thread was reading a line. We stored the word count in the counter and used the most_common function to return the top K words. However, this approach was not efficient for larger datasets as too many threads were being used, resulting in high CPU utilization and slow performance.
 
 To evaluate the performance of these approaches, we measured various metrics such as running time, speedup, CPU utilization, and memory usage. Based on the analysis of the results, we identified the most efficient approach. We also provided a detailed analysis of why we chose a particular algorithm or a particular data structure to solve this problem, considering the trade-offs between time complexity, space complexity, and parallelism. Overall, we aimed to achieve the best performance possible while minimizing the execution time of our code.
