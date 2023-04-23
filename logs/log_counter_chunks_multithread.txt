@@ -1,0 +1,208 @@
+**************************************************************                
+Output logs                
+Date:		2023-04-22 16:46:43.390505                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+us                   23451
+would                22725
+countries            21087
+world                20119
+one                  17078
+china                16886
+new                  16443
+economic             16356
+क                    16151
+government           14681
+
+-------------------------------------------------------------
+
+File name:		small_50MB_dataset.txt                
+File Size: 		0.04 GB                
+Chunk Size: 		5 MB                
+Running time:		4.38 seconds                
+Memory usage:		121.88 MB                
+CPU utilization:	1.20 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 16:46:52.774211                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+us                   23451
+would                22725
+countries            21087
+world                20119
+one                  17078
+china                16886
+new                  16443
+economic             16356
+क                    16151
+government           14681
+
+Top frequent words:
+
+Word               Count
+us                   23289
+would                22708
+countries            21064
+world                20120
+one                  17069
+china                16888
+new                  16418
+economic             16353
+क                    15705
+government           14610
+
+-------------------------------------------------------------
+
+File name:		small_50MB_dataset.txt                
+File Size: 		0.04 GB                
+Chunk Size: 		10 MB                
+Running time:		4.69 seconds                
+Memory usage:		188.07 MB                
+CPU utilization:	3.60 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 16:47:01.820492                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+us                   23451
+would                22725
+countries            21087
+world                20119
+one                  17078
+china                16886
+new                  16443
+economic             16356
+क                    16151
+government           14681
+
+Top frequent words:
+
+Word               Count
+us                   23289
+would                22708
+countries            21064
+world                20120
+one                  17069
+china                16888
+new                  16418
+economic             16353
+क                    15705
+government           14610
+
+Top frequent words:
+
+Word               Count
+us                   23296
+would                22666
+countries            21065
+world                20052
+one                  16995
+china                16950
+new                  16413
+economic             16386
+क                    15705
+government           14652
+
+-------------------------------------------------------------
+
+File name:		small_50MB_dataset.txt                
+File Size: 		0.04 GB                
+Chunk Size: 		20 MB                
+Running time:		4.52 seconds                
+Memory usage:		225.91 MB                
+CPU utilization:	1.30 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 16:47:10.889686                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+us                   23451
+would                22725
+countries            21087
+world                20119
+one                  17078
+china                16886
+new                  16443
+economic             16356
+क                    16151
+government           14681
+
+Top frequent words:
+
+Word               Count
+us                   23289
+would                22708
+countries            21064
+world                20120
+one                  17069
+china                16888
+new                  16418
+economic             16353
+क                    15705
+government           14610
+
+Top frequent words:
+
+Word               Count
+us                   23296
+would                22666
+countries            21065
+world                20052
+one                  16995
+china                16950
+new                  16413
+economic             16386
+क                    15705
+government           14652
+
+Top frequent words:
+
+Word               Count
+us                   23263
+would                22647
+countries            21031
+world                20074
+one                  17050
+china                16862
+new                  16419
+economic             16357
+क                    15705
+government           14627
+
+-------------------------------------------------------------
+
+File name:		small_50MB_dataset.txt                
+File Size: 		0.04 GB                
+Chunk Size: 		40 MB                
+Running time:		4.53 seconds                
+Memory usage:		234.38 MB                
+CPU utilization:	1.10 %
+
+************************** END *******************************
+

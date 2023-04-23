@@ -1,0 +1,31 @@
+**************************************************************                
+Output logs                
+Date:		2023-04-22 16:56:45.379524                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+us                   22806
+would                22235
+countries            20667
+world                19700
+one                  16685
+china                16555
+new                  16103
+economic             16073
+क                    15705
+government           14344
+
+-------------------------------------------------------------
+
+File name:		small_50MB_dataset.txt                
+File Size: 		0.04 GB                
+Chunk Size: 		None                
+Running time:		4.50 seconds                
+Memory usage:		17.95 MB                
+CPU utilization:	9.00 %
+
+************************** END *******************************
+
