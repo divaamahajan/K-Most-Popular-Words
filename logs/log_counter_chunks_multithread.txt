@@ -206,3 +206,427 @@ CPU utilization:	1.10 %
 
 ************************** END *******************************
 
+**************************************************************                
+Output logs                
+Date:		2023-04-22 18:47:30.470679                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+
+-------------------------------------------------------------
+
+File name:		data_300MB.txt                
+File Size: 		0.29 GB                
+Chunk Size: 		5 MB                
+Running time:		0.06 seconds                
+Memory usage:		15.02 MB                
+CPU utilization:	10.30 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 18:47:30.524063                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+
+Top frequent words:
+
+Word               Count
+
+-------------------------------------------------------------
+
+File name:		data_300MB.txt                
+File Size: 		0.29 GB                
+Chunk Size: 		10 MB                
+Running time:		0.02 seconds                
+Memory usage:		15.08 MB                
+CPU utilization:	12.50 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 18:47:30.551631                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+
+Top frequent words:
+
+Word               Count
+
+Top frequent words:
+
+Word               Count
+
+-------------------------------------------------------------
+
+File name:		data_300MB.txt                
+File Size: 		0.29 GB                
+Chunk Size: 		20 MB                
+Running time:		0.01 seconds                
+Memory usage:		15.14 MB                
+CPU utilization:	66.70 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 18:47:30.566570                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+
+Top frequent words:
+
+Word               Count
+
+Top frequent words:
+
+Word               Count
+
+Top frequent words:
+
+Word               Count
+
+-------------------------------------------------------------
+
+File name:		data_300MB.txt                
+File Size: 		0.29 GB                
+Chunk Size: 		40 MB                
+Running time:		0.01 seconds                
+Memory usage:		15.14 MB                
+CPU utilization:	0.00 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 18:49:05.612886                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+european             318825
+mr                   210741
+would                181966
+also                 180163
+commission           172872
+
+-------------------------------------------------------------
+
+File name:		data_300MB.txt                
+File Size: 		0.29 GB                
+Chunk Size: 		5 MB                
+Running time:		11.48 seconds                
+Memory usage:		462.14 MB                
+CPU utilization:	5.80 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 18:49:28.725244                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+european             318825
+mr                   210741
+would                181966
+also                 180163
+commission           172872
+
+Top frequent words:
+
+Word               Count
+european             318821
+mr                   210733
+would                181976
+also                 180172
+commission           172870
+
+-------------------------------------------------------------
+
+File name:		data_300MB.txt                
+File Size: 		0.29 GB                
+Chunk Size: 		10 MB                
+Running time:		11.55 seconds                
+Memory usage:		664.78 MB                
+CPU utilization:	7.00 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 18:49:51.817474                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+european             318825
+mr                   210741
+would                181966
+also                 180163
+commission           172872
+
+Top frequent words:
+
+Word               Count
+european             318821
+mr                   210733
+would                181976
+also                 180172
+commission           172870
+
+Top frequent words:
+
+Word               Count
+european             318812
+mr                   210757
+would                181969
+also                 180176
+commission           172822
+
+-------------------------------------------------------------
+
+File name:		data_300MB.txt                
+File Size: 		0.29 GB                
+Chunk Size: 		20 MB                
+Running time:		11.54 seconds                
+Memory usage:		786.53 MB                
+CPU utilization:	3.70 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 18:50:14.388714                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+european             318825
+mr                   210741
+would                181966
+also                 180163
+commission           172872
+
+Top frequent words:
+
+Word               Count
+european             318821
+mr                   210733
+would                181976
+also                 180172
+commission           172870
+
+Top frequent words:
+
+Word               Count
+european             318812
+mr                   210757
+would                181969
+also                 180176
+commission           172822
+
+Top frequent words:
+
+Word               Count
+european             318785
+mr                   210751
+would                181965
+also                 180180
+commission           172822
+
+-------------------------------------------------------------
+
+File name:		data_300MB.txt                
+File Size: 		0.29 GB                
+Chunk Size: 		40 MB                
+Running time:		11.28 seconds                
+Memory usage:		991.03 MB                
+CPU utilization:	3.00 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 18:54:46.956659                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+said                 2616264
+one                  949555
+would                917212
+new                  852821
+also                 727934
+
+-------------------------------------------------------------
+
+File name:		data_2.5GB.txt                
+File Size: 		2.31 GB                
+Chunk Size: 		5 MB                
+Running time:		111.39 seconds                
+Memory usage:		1328.56 MB                
+CPU utilization:	3.50 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 18:59:34.742460                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+said                 2616264
+one                  949555
+would                917212
+new                  852821
+also                 727934
+
+Top frequent words:
+
+Word               Count
+said                 2616266
+one                  949555
+would                917212
+new                  852822
+also                 727934
+
+-------------------------------------------------------------
+
+File name:		data_2.5GB.txt                
+File Size: 		2.31 GB                
+Chunk Size: 		10 MB                
+Running time:		113.42 seconds                
+Memory usage:		1556.97 MB                
+CPU utilization:	4.30 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 19:05:56.355678                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+said                 2616264
+one                  949555
+would                917212
+new                  852821
+also                 727934
+
+Top frequent words:
+
+Word               Count
+said                 2616266
+one                  949555
+would                917212
+new                  852822
+also                 727934
+
+Top frequent words:
+
+Word               Count
+said                 2616266
+would                917212
+new                  852822
+one                  829116
+also                 727934
+
+-------------------------------------------------------------
+
+File name:		data_2.5GB.txt                
+File Size: 		2.31 GB                
+Chunk Size: 		20 MB                
+Running time:		181.38 seconds                
+Memory usage:		2340.48 MB                
+CPU utilization:	3.30 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-22 19:13:39.819004                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+said                 2616264
+one                  949555
+would                917212
+new                  852821
+also                 727934
+
+Top frequent words:
+
+Word               Count
+said                 2616266
+one                  949555
+would                917212
+new                  852822
+also                 727934
+
+Top frequent words:
+
+Word               Count
+said                 2616266
+would                917212
+new                  852822
+one                  829116
+also                 727934
+
+Top frequent words:
+
+Word               Count
+said                 2616266
+one                  949555
+would                917212
+new                  852822
+also                 727934
+
+-------------------------------------------------------------
+
+File name:		data_2.5GB.txt                
+File Size: 		2.31 GB                
+Chunk Size: 		40 MB                
+Running time:		115.76 seconds                
+Memory usage:		1952.41 MB                
+CPU utilization:	3.60 %
+
+************************** END *******************************
+

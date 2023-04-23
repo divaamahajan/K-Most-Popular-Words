@@ -1,302 +1,6 @@
 **************************************************************                
 Output logs                
-Date:		2023-04-22 16:59:51.486101                
-**************************************************************
-
-
-Top frequent words:
-
-Word               Count
-us                   23246
-would                22614
-countries            21079
-world                20052
-one                  17000
-china                16869
-economic             16488
-new                  16425
-क                    16190
-government           14702
-
--------------------------------------------------------------
-
-File name:		small_50MB_dataset.txt                
-File Size: 		0.04 GB                
-Chunk Size: 		5.73 MB or 0.01 GB Decided by CPU 
-	 file size 45.83 MB or 0.04 GB /( CPU count 4 * 2)                
-Running time:		2.05 seconds                
-Memory usage:		98.02 MB                
-CPU utilization:	1.40 %
-
-************************** END *******************************
-
-**************************************************************                
-Output logs                
-Date:		2023-04-22 16:59:55.957126                
-**************************************************************
-
-
-Top frequent words:
-
-Word               Count
-us                   23246
-would                22614
-countries            21079
-world                20052
-one                  17000
-china                16869
-economic             16488
-new                  16425
-क                    16190
-government           14702
-
-Top frequent words:
-
-Word               Count
-us                   23451
-would                22725
-countries            21087
-world                20119
-one                  17078
-china                16886
-new                  16443
-economic             16356
-क                    16151
-government           14681
-
--------------------------------------------------------------
-
-File name:		small_50MB_dataset.txt                
-File Size: 		0.04 GB                
-Chunk Size: 		5 MB                
-Running time:		2.22 seconds                
-Memory usage:		127.02 MB                
-CPU utilization:	1.30 %
-
-************************** END *******************************
-
-**************************************************************                
-Output logs                
-Date:		2023-04-22 16:59:59.685229                
-**************************************************************
-
-
-Top frequent words:
-
-Word               Count
-us                   23246
-would                22614
-countries            21079
-world                20052
-one                  17000
-china                16869
-economic             16488
-new                  16425
-क                    16190
-government           14702
-
-Top frequent words:
-
-Word               Count
-us                   23451
-would                22725
-countries            21087
-world                20119
-one                  17078
-china                16886
-new                  16443
-economic             16356
-क                    16151
-government           14681
-
-Top frequent words:
-
-Word               Count
-us                   23289
-would                22708
-countries            21064
-world                20120
-one                  17069
-china                16888
-new                  16418
-economic             16353
-क                    15705
-government           14610
-
--------------------------------------------------------------
-
-File name:		small_50MB_dataset.txt                
-File Size: 		0.04 GB                
-Chunk Size: 		10 MB                
-Running time:		1.85 seconds                
-Memory usage:		161.00 MB                
-CPU utilization:	7.90 %
-
-************************** END *******************************
-
-**************************************************************                
-Output logs                
-Date:		2023-04-22 17:00:05.343845                
-**************************************************************
-
-
-Top frequent words:
-
-Word               Count
-us                   23246
-would                22614
-countries            21079
-world                20052
-one                  17000
-china                16869
-economic             16488
-new                  16425
-क                    16190
-government           14702
-
-Top frequent words:
-
-Word               Count
-us                   23451
-would                22725
-countries            21087
-world                20119
-one                  17078
-china                16886
-new                  16443
-economic             16356
-क                    16151
-government           14681
-
-Top frequent words:
-
-Word               Count
-us                   23289
-would                22708
-countries            21064
-world                20120
-one                  17069
-china                16888
-new                  16418
-economic             16353
-क                    15705
-government           14610
-
-Top frequent words:
-
-Word               Count
-us                   23296
-would                22666
-countries            21065
-world                20052
-one                  16995
-china                16950
-new                  16413
-economic             16386
-क                    15705
-government           14652
-
--------------------------------------------------------------
-
-File name:		small_50MB_dataset.txt                
-File Size: 		0.04 GB                
-Chunk Size: 		20 MB                
-Running time:		2.81 seconds                
-Memory usage:		109.95 MB                
-CPU utilization:	5.80 %
-
-************************** END *******************************
-
-**************************************************************                
-Output logs                
-Date:		2023-04-22 17:00:13.017315                
-**************************************************************
-
-
-Top frequent words:
-
-Word               Count
-us                   23246
-would                22614
-countries            21079
-world                20052
-one                  17000
-china                16869
-economic             16488
-new                  16425
-क                    16190
-government           14702
-
-Top frequent words:
-
-Word               Count
-us                   23451
-would                22725
-countries            21087
-world                20119
-one                  17078
-china                16886
-new                  16443
-economic             16356
-क                    16151
-government           14681
-
-Top frequent words:
-
-Word               Count
-us                   23289
-would                22708
-countries            21064
-world                20120
-one                  17069
-china                16888
-new                  16418
-economic             16353
-क                    15705
-government           14610
-
-Top frequent words:
-
-Word               Count
-us                   23296
-would                22666
-countries            21065
-world                20052
-one                  16995
-china                16950
-new                  16413
-economic             16386
-क                    15705
-government           14652
-
-Top frequent words:
-
-Word               Count
-us                   23263
-would                22647
-countries            21031
-world                20074
-one                  17050
-china                16862
-new                  16419
-economic             16357
-क                    15705
-government           14627
-
--------------------------------------------------------------
-
-File name:		small_50MB_dataset.txt                
-File Size: 		0.04 GB                
-Chunk Size: 		40 MB                
-Running time:		3.81 seconds                
-Memory usage:		156.04 MB                
-CPU utilization:	1.30 %
-
-************************** END *******************************
-
-**************************************************************                
-Output logs                
-Date:		2023-04-22 22:06:22.684000                
+Date:		2023-04-22 19:53:58.678943                
 **************************************************************
 
 
@@ -315,15 +19,15 @@ File name:		data_300MB.txt
 File Size: 		0.29 GB                
 Chunk Size: 		15.09 MB or 0.01 GB Decided by CPU 
 	 file size 301.87 MB or 0.29 GB /( CPU count 10 * 2)                
-Running time:		1.69 seconds                
-Memory usage:		299.44 MB                
-CPU utilization:	3.70 %
+Running time:		1.75 seconds                
+Memory usage:		294.25 MB                
+CPU utilization:	2.40 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:06:25.921462                
+Date:		2023-04-22 19:54:01.886773                
 **************************************************************
 
 
@@ -350,15 +54,15 @@ commission           172872
 File name:		data_300MB.txt                
 File Size: 		0.29 GB                
 Chunk Size: 		5 MB                
-Running time:		1.60 seconds                
-Memory usage:		801.64 MB                
-CPU utilization:	2.40 %
+Running time:		1.59 seconds                
+Memory usage:		791.59 MB                
+CPU utilization:	5.50 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:06:29.167625                
+Date:		2023-04-22 19:54:05.303224                
 **************************************************************
 
 
@@ -394,15 +98,15 @@ commission           172870
 File name:		data_300MB.txt                
 File Size: 		0.29 GB                
 Chunk Size: 		10 MB                
-Running time:		1.60 seconds                
-Memory usage:		782.69 MB                
-CPU utilization:	3.20 %
+Running time:		1.69 seconds                
+Memory usage:		773.16 MB                
+CPU utilization:	2.70 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:06:33.050828                
+Date:		2023-04-22 19:54:09.128457                
 **************************************************************
 
 
@@ -447,15 +151,15 @@ commission           172822
 File name:		data_300MB.txt                
 File Size: 		0.29 GB                
 Chunk Size: 		20 MB                
-Running time:		1.93 seconds                
-Memory usage:		882.70 MB                
-CPU utilization:	1.70 %
+Running time:		1.89 seconds                
+Memory usage:		876.69 MB                
+CPU utilization:	4.10 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:06:37.019042                
+Date:		2023-04-22 19:54:13.169878                
 **************************************************************
 
 
@@ -509,15 +213,15 @@ commission           172822
 File name:		data_300MB.txt                
 File Size: 		0.29 GB                
 Chunk Size: 		40 MB                
-Running time:		1.97 seconds                
-Memory usage:		1108.41 MB                
-CPU utilization:	1.50 %
+Running time:		2.00 seconds                
+Memory usage:		1103.28 MB                
+CPU utilization:	2.00 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:07:42.964215                
+Date:		2023-04-22 19:55:41.059253                
 **************************************************************
 
 
@@ -536,15 +240,15 @@ File name:		data_2.5GB.txt
 File Size: 		2.31 GB                
 Chunk Size: 		118.21 MB or 0.12 GB Decided by CPU 
 	 file size 2364.19 MB or 2.31 GB /( CPU count 10 * 2)                
-Running time:		18.74 seconds                
-Memory usage:		1188.83 MB                
-CPU utilization:	2.00 %
+Running time:		18.69 seconds                
+Memory usage:		1393.28 MB                
+CPU utilization:	5.00 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:08:16.308700                
+Date:		2023-04-22 19:56:14.143551                
 **************************************************************
 
 
@@ -571,15 +275,15 @@ also                 727934
 File name:		data_2.5GB.txt                
 File Size: 		2.31 GB                
 Chunk Size: 		5 MB                
-Running time:		16.63 seconds                
-Memory usage:		2063.62 MB                
+Running time:		16.51 seconds                
+Memory usage:		2497.41 MB                
 CPU utilization:	2.00 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:08:49.193294                
+Date:		2023-04-22 19:56:45.524392                
 **************************************************************
 
 
@@ -615,15 +319,15 @@ also                 727934
 File name:		data_2.5GB.txt                
 File Size: 		2.31 GB                
 Chunk Size: 		10 MB                
-Running time:		16.41 seconds                
-Memory usage:		1529.69 MB                
+Running time:		15.67 seconds                
+Memory usage:		1206.36 MB                
 CPU utilization:	1.60 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:09:19.239729                
+Date:		2023-04-22 19:57:14.892649                
 **************************************************************
 
 
@@ -668,15 +372,15 @@ also                 727934
 File name:		data_2.5GB.txt                
 File Size: 		2.31 GB                
 Chunk Size: 		20 MB                
-Running time:		14.98 seconds                
-Memory usage:		1672.67 MB                
-CPU utilization:	2.00 %
+Running time:		14.66 seconds                
+Memory usage:		1381.42 MB                
+CPU utilization:	2.80 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:09:49.756788                
+Date:		2023-04-22 19:57:45.110853                
 **************************************************************
 
 
@@ -730,15 +434,15 @@ also                 727934
 File name:		data_2.5GB.txt                
 File Size: 		2.31 GB                
 Chunk Size: 		40 MB                
-Running time:		15.22 seconds                
-Memory usage:		1871.66 MB                
-CPU utilization:	1.50 %
+Running time:		15.08 seconds                
+Memory usage:		1577.55 MB                
+CPU utilization:	13.60 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:16:34.265290                
+Date:		2023-04-22 20:08:15.658852                
 **************************************************************
 
 
@@ -757,15 +461,15 @@ File name:		data_16GB.txt
 File Size: 		14.34 GB                
 Chunk Size: 		734.09 MB or 0.72 GB Decided by CPU 
 	 file size 14681.90 MB or 14.34 GB /( CPU count 10 * 2)                
-Running time:		179.88 seconds                
-Memory usage:		600.94 MB                
-CPU utilization:	2.40 %
+Running time:		279.98 seconds                
+Memory usage:		401.98 MB                
+CPU utilization:	6.30 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:21:01.423863                
+Date:		2023-04-22 20:13:05.952330                
 **************************************************************
 
 
@@ -792,15 +496,15 @@ also                 4618278
 File name:		data_16GB.txt                
 File Size: 		14.34 GB                
 Chunk Size: 		5 MB                
-Running time:		133.52 seconds                
-Memory usage:		1955.55 MB                
-CPU utilization:	2.30 %
+Running time:		145.11 seconds                
+Memory usage:		1908.38 MB                
+CPU utilization:	10.60 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:24:51.224180                
+Date:		2023-04-22 20:16:55.237458                
 **************************************************************
 
 
@@ -836,15 +540,15 @@ also                 4618289
 File name:		data_16GB.txt                
 File Size: 		14.34 GB                
 Chunk Size: 		10 MB                
-Running time:		114.83 seconds                
-Memory usage:		1043.92 MB                
-CPU utilization:	4.40 %
+Running time:		114.61 seconds                
+Memory usage:		492.36 MB                
+CPU utilization:	10.80 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:28:39.593585                
+Date:		2023-04-22 20:22:50.203927                
 **************************************************************
 
 
@@ -889,15 +593,15 @@ also                 4618293
 File name:		data_16GB.txt                
 File Size: 		14.34 GB                
 Chunk Size: 		20 MB                
-Running time:		114.10 seconds                
-Memory usage:		571.92 MB                
-CPU utilization:	2.50 %
+Running time:		177.44 seconds                
+Memory usage:		751.52 MB                
+CPU utilization:	2.30 %
 
 ************************** END *******************************
 
 **************************************************************                
 Output logs                
-Date:		2023-04-22 22:32:21.188847                
+Date:		2023-04-22 20:26:34.001206                
 **************************************************************
 
 
@@ -951,8 +655,8 @@ also                 4618296
 File name:		data_16GB.txt                
 File Size: 		14.34 GB                
 Chunk Size: 		40 MB                
-Running time:		110.73 seconds                
-Memory usage:		625.84 MB                
+Running time:		111.86 seconds                
+Memory usage:		418.05 MB                
 CPU utilization:	4.20 %
 
 ************************** END *******************************

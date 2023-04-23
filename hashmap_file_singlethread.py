@@ -25,10 +25,10 @@ def read_datafile(file_path, stop_words):
 def main():
     # set the number of top words to find
     k = int(input("Enter the number of top words to find: "))
-    filename = log.FILENAME_50MB
+    filename = log.FILENAME_16GB
 
     # get the file size
-    file_name = filename
+    file_name = "/Users/rushshah/SCU/BigData/" + filename
     file_size = os.path.getsize(file_name)
     file_size_GB = file_size / (1024 * 1024 * 1024)
     
@@ -37,7 +37,7 @@ def main():
     start_time = time.time()
 
     # count words from data file
-    word_counts = read_datafile(filename, stop_words)
+    word_counts = read_datafile(file_name, stop_words)
 
     current_file = os.path.basename(__file__).split(".")[0]
     
