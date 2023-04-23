@@ -104,7 +104,7 @@ In summary, this approach aims to optimize the multithreading approach used in A
 
 ## Evaluation
 
-To evaluate the performance of these approaches, we measured various metrics such as running time, speedup, CPU utilization, and memory usage and mainted detailed [logs](https://github.com/divaamahajan/K-Most-Popular-Words/tree/main/logs) of each execution.The [logs.csv](https://github.com/divaamahajan/K-Most-Popular-Words/tree/main/logs) file contains data about the performance metrics of all approaches combined for finding the k most popular words in a dataset. The following columns can be used for visualizations and analysis:
+To evaluate the performance of these approaches, we measured various metrics such as running time, speedup, CPU utilization, and memory usage and mainted detailed [logs](https://github.com/divaamahajan/K-Most-Popular-Words/tree/main/logs) of each execution.The [logs.csv](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/logs/logs.csv) file contains data about the performance metrics of all approaches combined for finding the k most popular words in a dataset. The following columns can be used for visualizations and analysis:
 1. Approach: This column specifies the approach used to find the k most popular words in a dataset.
 2. Input Size (MB): This column specifies the size of the input dataset in megabytes.
 3. Total Time (s): This column specifies the total time taken by the approach to find the k most popular words in the dataset.
