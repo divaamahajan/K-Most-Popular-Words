@@ -78,7 +78,7 @@ def process_data(filename, stop_words, top_k, chunk_size=None):
 def main():
     # set the number of top words to find
     k = int(input("Enter the number of top words to find: "))
-    filename = log.FILENAME_2_5GB
+    filename = log.FILENAME_300MB
 
     # read stop words
     stop_words = read_stop_words(log.FILE_STOP_WORDS)

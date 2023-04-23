@@ -40,7 +40,7 @@ def process_data(filename, stop_words,top_k, chunk_size=None, ):
     print_size = log.size_dict[chunk_size]
 
     # get the file size
-    file_name = filename
+    file_name = "/Users/rushshah/SCU/BigData/" + filename
     file_size = os.path.getsize(file_name)
     file_size_MB = file_size / (1024 * 1024)
     file_size_GB = file_size / (1024 * 1024 * 1024)
@@ -55,7 +55,7 @@ def process_data(filename, stop_words,top_k, chunk_size=None, ):
     start_time = time.time()
 
     # count words from data file
-    word_counts = read_datafile(filename, stop_words, chunk_size)
+    word_counts = read_datafile(file_name, stop_words, chunk_size)
 
 
     current_file = os.path.basename(__file__).split(".")[0]
@@ -69,7 +69,7 @@ def process_data(filename, stop_words,top_k, chunk_size=None, ):
 def main():
     # set the number of top words to find
     k = int(input("Enter the number of top words to find: "))
-    filename = log.FILENAME_50MB
+    filename = log.FILENAME_16GB
     # read stop words from file
     stop_words = read_stop_words(log.FILE_STOP_WORDS)
 
