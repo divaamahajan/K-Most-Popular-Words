@@ -104,13 +104,21 @@ In summary, this approach aims to optimize the multithreading approach used in A
 
 ## Evaluation
 
-To evaluate the performance of these approaches, we measured various metrics such as running time, speedup, CPU utilization, and memory usage and mainted detailed [logs](https://github.com/divaamahajan/K-Most-Popular-Words/tree/main/logs) of each execution.The [logs.csv](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/logs/logs.csv) file contains data about the performance metrics of all approaches combined for finding the k most popular words in a dataset. The following columns can be used for visualizations and analysis:
-1. Approach: This column specifies the approach used to find the k most popular words in a dataset.
-2. Input Size (MB): This column specifies the size of the input dataset in megabytes.
-3. Total Time (s): This column specifies the total time taken by the approach to find the k most popular words in the dataset.
-4. Time Per Query (s): This column specifies the average time taken by the approach to find a single query (i.e., a single value of k) in the dataset.
-5. Speedup: This column specifies the speedup of the approach over the baseline approach. The baseline approach is the simplest approach that is used as a reference point for comparison with other approaches.
-6. CPU Utilization: This column specifies the average CPU utilization during the execution of the approach.
-7. Memory Usage (MB): This column specifies the average memory usage during the execution of the approach.
+To evaluate the performance of these approaches, we measured various metrics such as running time, speedup, CPU utilization, and memory usage and mainted detailed [logs](https://github.com/divaamahajan/K-Most-Popular-Words/tree/main/logs) of each execution.The [logs.csv](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/logs/logs.csv) file contains contains a log of the experiments conducted to determine the most efficient approach for finding the top k most popular words in a given dataset. Each row in the file represents a particular configuration of the algorithm approach, data structure, file division, and input file size used to run the experiment. The file includes various performance metrics such as running time, memory usage, and CPU utilization, for each configuration tested.
+
+The logs.csv file has 10 columns, including:
+
+* Top k: The number of top most frequent words to be determined.
+* Data Structure: The data structure used to store the word count.
+* File division: Whether the input file was divided into chunks or not.
+* Algorithm Approach: The approach used to solve the problem.
+* Filename: The name of the input file used for the experiment.
+* File Size (GB): The size of the input file used for the experiment in gigabytes.
+* Chunk Size (MB): The size of the chunk used to divide the input file (if applicable).
+* Running time (seconds): The time taken to execute the code in seconds.
+* Memory usage (MB): The amount of memory used by the program in megabytes.
+* CPU utilization %: The percentage of CPU utilized by the program during execution.
+
+The logs.csv file serves as a record of the various experiments conducted to find the optimal configuration for the problem statement. It helps to analyze the performance of each configuration and compare the results to identify the best approach. The logs.csv file can be used to gain insights into the impact of various parameters such as file size, chunk size, and data structure on the performance of the algorithm.
 
 Based on the analysis of the results, we identified the most efficient approach. We also provided a detailed analysis of why we chose a particular algorithm or a particular data structure to solve this problem, considering the trade-offs between time complexity, space complexity, and parallelism. Overall, we aimed to achieve the best performance possible while minimizing the execution time of our code.
