@@ -20,3 +20,45 @@ Top k,Data Structure,File division,Algorithm Approach,Filename,File Size (GB),Ch
 10,defaultdict,chunks,multiprocess,small_50MB_dataset.txt,0.04,20,2.81,109.95,5.80
 10,defaultdict,chunks,multiprocess,small_50MB_dataset.txt,0.04,40,3.81,156.04,1.30
 10,hashmap,file,singlethread,small_50MB_dataset.txt,0.04,,3.48,21.45,3.30
+5,counter,chunks,multithread,data_300MB.txt,0.29,5,0.06,15.02,10.30
+5,counter,chunks,multithread,data_300MB.txt,0.29,10,0.02,15.08,12.50
+5,counter,chunks,multithread,data_300MB.txt,0.29,20,0.01,15.14,66.70
+5,counter,chunks,multithread,data_300MB.txt,0.29,40,0.01,15.14,0.00
+5,counter,chunks,multithread,data_300MB.txt,0.29,5,11.48,462.14,5.80
+5,counter,chunks,multithread,data_300MB.txt,0.29,10,11.55,664.78,7.00
+5,counter,chunks,multithread,data_300MB.txt,0.29,20,11.54,786.53,3.70
+5,counter,chunks,multithread,data_300MB.txt,0.29,40,11.28,991.03,3.00
+5,counter,chunks,multithread,data_2.5GB.txt,2.31,5,111.39,1328.56,3.50
+5,counter,chunks,multithread,data_2.5GB.txt,2.31,10,113.42,1556.97,4.30
+5,counter,chunks,multithread,data_2.5GB.txt,2.31,20,181.38,2340.48,3.30
+5,counter,chunks,multithread,data_2.5GB.txt,2.31,40,115.76,1952.41,3.60
+5,defaultdict,chunks heapq,singlethread,data_300MB.txt,0.29,15.09,1.75,294.25,2.40
+5,defaultdict,chunks heapq,singlethread,data_300MB.txt,0.29,5,1.59,791.59,5.50
+5,defaultdict,chunks heapq,singlethread,data_300MB.txt,0.29,10,1.69,773.16,2.70
+5,defaultdict,chunks heapq,singlethread,data_300MB.txt,0.29,20,1.89,876.69,4.10
+5,defaultdict,chunks heapq,singlethread,data_300MB.txt,0.29,40,2.00,1103.28,2.00
+5,defaultdict,chunks heapq,singlethread,data_2.5GB.txt,2.31,118.21,18.69,1393.28,5.00
+5,defaultdict,chunks heapq,singlethread,data_2.5GB.txt,2.31,5,16.51,2497.41,2.00
+5,defaultdict,chunks heapq,singlethread,data_2.5GB.txt,2.31,10,15.67,1206.36,1.60
+5,defaultdict,chunks heapq,singlethread,data_2.5GB.txt,2.31,20,14.66,1381.42,2.80
+5,defaultdict,chunks heapq,singlethread,data_2.5GB.txt,2.31,40,15.08,1577.55,13.60
+5,defaultdict,chunks heapq,singlethread,data_16GB.txt,14.34,734.09,279.98,401.98,6.30
+5,defaultdict,chunks heapq,singlethread,data_16GB.txt,14.34,5,145.11,1908.38,10.60
+5,defaultdict,chunks heapq,singlethread,data_16GB.txt,14.34,10,114.61,492.36,10.80
+5,defaultdict,chunks heapq,singlethread,data_16GB.txt,14.34,20,177.44,751.52,2.30
+5,defaultdict,chunks heapq,singlethread,data_16GB.txt,14.34,40,111.86,418.05,4.20
+5,defaultdict,chunks,multiprocess,data_300MB.txt,0.29,15.09,1.69,299.44,3.70
+5,defaultdict,chunks,multiprocess,data_300MB.txt,0.29,5,1.60,801.64,2.40
+5,defaultdict,chunks,multiprocess,data_300MB.txt,0.29,10,1.60,782.69,3.20
+5,defaultdict,chunks,multiprocess,data_300MB.txt,0.29,20,1.93,882.70,1.70
+5,defaultdict,chunks,multiprocess,data_300MB.txt,0.29,40,1.97,1108.41,1.50
+5,defaultdict,chunks,multiprocess,data_2.5GB.txt,2.31,118.21,18.74,1188.83,2.00
+5,defaultdict,chunks,multiprocess,data_2.5GB.txt,2.31,5,16.63,2063.62,2.00
+5,defaultdict,chunks,multiprocess,data_2.5GB.txt,2.31,10,16.41,1529.69,1.60
+5,defaultdict,chunks,multiprocess,data_2.5GB.txt,2.31,20,14.98,1672.67,2.00
+5,defaultdict,chunks,multiprocess,data_2.5GB.txt,2.31,40,15.22,1871.66,1.50
+5,defaultdict,chunks,multiprocess,data_16GB.txt,14.34,734.09,179.88,600.94,2.40
+5,defaultdict,chunks,multiprocess,data_16GB.txt,14.34,5,133.52,1955.55,2.30
+5,defaultdict,chunks,multiprocess,data_16GB.txt,14.34,10,114.83,1043.92,4.40
+5,defaultdict,chunks,multiprocess,data_16GB.txt,14.34,20,114.10,571.92,2.50
+5,defaultdict,chunks,multiprocess,data_16GB.txt,14.34,40,110.73,625.84,4.20
