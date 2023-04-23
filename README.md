@@ -103,4 +103,14 @@ However, this approach is not efficient for larger datasets as too many threads 
 In summary, this approach aims to optimize the multithreading approach used in Approach 6 by creating a separate thread for each line in the data file and aggregating the local counters of all threads. However, this approach is not efficient for larger datasets due to the high CPU utilization and slow performance resulting from the use of too many threads.
 
 ## Evaluation
-To evaluate the performance of these approaches, we measured various metrics such as running time, speedup, CPU utilization, and memory usage and mainted detailed [logs](https://github.com/divaamahajan/K-Most-Popular-Words/tree/main/logs). Based on the analysis of the results, we identified the most efficient approach. We also provided a detailed analysis of why we chose a particular algorithm or a particular data structure to solve this problem, considering the trade-offs between time complexity, space complexity, and parallelism. Overall, we aimed to achieve the best performance possible while minimizing the execution time of our code.
+
+To evaluate the performance of these approaches, we measured various metrics such as running time, speedup, CPU utilization, and memory usage and mainted detailed [logs](https://github.com/divaamahajan/K-Most-Popular-Words/tree/main/logs) of each execution.The [logs.csv](https://github.com/divaamahajan/K-Most-Popular-Words/tree/main/logs) file contains data about the performance metrics of all approaches combined for finding the k most popular words in a dataset. The following columns can be used for visualizations and analysis:
+1. Approach: This column specifies the approach used to find the k most popular words in a dataset.
+2. Input Size (MB): This column specifies the size of the input dataset in megabytes.
+3. Total Time (s): This column specifies the total time taken by the approach to find the k most popular words in the dataset.
+4. Time Per Query (s): This column specifies the average time taken by the approach to find a single query (i.e., a single value of k) in the dataset.
+5. Speedup: This column specifies the speedup of the approach over the baseline approach. The baseline approach is the simplest approach that is used as a reference point for comparison with other approaches.
+6. CPU Utilization: This column specifies the average CPU utilization during the execution of the approach.
+7. Memory Usage (MB): This column specifies the average memory usage during the execution of the approach.
+
+Based on the analysis of the results, we identified the most efficient approach. We also provided a detailed analysis of why we chose a particular algorithm or a particular data structure to solve this problem, considering the trade-offs between time complexity, space complexity, and parallelism. Overall, we aimed to achieve the best performance possible while minimizing the execution time of our code.
