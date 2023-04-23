@@ -6,7 +6,7 @@ The primary focus of this project is to obtain the result with the least possibl
 
 The result should preserve case sensitivity, which means that words like "Title" and "title" are considered as two different words. The input dataset contains only English alphabets, white spaces and hyphen separated words, i.e., "a-z," "A-Z," "\s."
 
-Initially, the code has been tested on a smaller dataset provided at https://drive.google.com/file/d/1dX8sgA2dX-0Pr2NFePopKMtFGDYnmVBo/view?usp=sharing. Then, the code has been executed on three larger datasets of different sizes provided in a zip file available at [zip_file_link](https://drive.google.com/file/d/1kaVM15rD9_O9HsvzrUKkIZ4R6ETUAdo4/view?usp=share_link). The zip file consists of three files with only English words, i.e., data_300MB.txt - a text file of size 300MB, data_2.5GB.txt - a text file of size 2.5GB, and data_16GB.txt - a text file of size 16GB.
+Initially, the code has been tested on a smaller dataset provided at [small_dataset](https://drive.google.com/file/d/1dX8sgA2dX-0Pr2NFePopKMtFGDYnmVBo/view?usp=sharing). Then, the code has been executed on three larger datasets of different sizes provided in a zip file available at [zip_file_link](https://drive.google.com/file/d/1kaVM15rD9_O9HsvzrUKkIZ4R6ETUAdo4/view?usp=share_link). The zip file consists of three files with only English words, i.e., data_300MB.txt - a text file of size 300MB, data_2.5GB.txt - a text file of size 2.5GB, and data_16GB.txt - a text file of size 16GB.
 
 This report presents a detailed analysis of why a particular algorithm or data structure has been used to solve this problem. The report also covers the presentation of the results obtained from the execution of the code and the performance metrics calculated.
 
