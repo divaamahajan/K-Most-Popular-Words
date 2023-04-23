@@ -28,9 +28,9 @@ This report presents a detailed analysis of why a particular algorithm or data s
 The dataset consists of files with only English words.
 1. [small_dataset](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/small_50MB_dataset.txt) size 50 MB
 2. [large datasets_zip](https://drive.google.com/file/d/1kaVM15rD9_O9HsvzrUKkIZ4R6ETUAdo4/view?usp=share_link)
-     2.1 data_300MB.txt – A text file of size 300MB.
-     2.2 data_2.5GB.txt – A text file of size 2.5GB.
-     2.3 data_16GB.txt – A text file of size 16GB.
+    2.1 data_300MB.txt – A text file of size 300MB.
+    2.2 data_2.5GB.txt – A text file of size 2.5GB.
+    2.3.data_16GB.txt – A text file of size 16GB.
 3. [stop_words](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/stop_words.txt) - words which should be skipped
 
 ## Experimental Process:
