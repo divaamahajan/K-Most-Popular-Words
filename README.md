@@ -24,6 +24,16 @@ This report presents a detailed analysis of why a particular algorithm or data s
 * **Programming Language**: Python3
 * **Compiler and Runtime Environment**: Python 3 interpreter
 
+## Input Datasets
+
+The dataset consists of files with only English words.
+1. [small_dataset](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/small_50MB_dataset.txt) size 50 MB
+2. [large datasets_zip](https://drive.google.com/file/d/1kaVM15rD9_O9HsvzrUKkIZ4R6ETUAdo4/view?usp=share_link)
+2.1 data_300MB.txt – A text file of size 300MB.
+2.2 data_2.5GB.txt – A text file of size 2.5GB.
+2.3 data_16GB.txt – A text file of size 16GB.
+3. [stop_words](https://github.com/divaamahajan/K-Most-Popular-Words/blob/main/stop_words.txt) - words which should be skipped
+
 ## Experimental Process:
 
 The goal of our experiment was to design and implement an efficient algorithm to find the top K most frequent words in a dataset. We experimented with various approaches using different data structures and algorithms and evaluated their performance on three input data files of different sizes. We implemented our approaches in Python and measured different metrics such as running time, speedup, CPU utilization, and memory usage to analyze their performance.
