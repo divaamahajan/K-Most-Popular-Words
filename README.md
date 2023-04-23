@@ -1,4 +1,8 @@
 # K Most Popular Words
+## Goal
+The goal of this report is to analyze the performance of different approaches for finding the k most popular words in a dataset while taking into account various factors that affect application performance. The report aims to investigate the impact of input size, algorithm efficiency, data structures, and system resource utilization (such as CPU and memory) on the performance of each approach. Through this analysis, the report aims to understand how the size of the input dataset affects the performance of each approach and identify techniques that can be used to mitigate the problems caused by increasing input dataset size, which is the core challenge of Big Data. By comparing and evaluating the performance of each approach, the report aims to provide insights into the strengths and limitations of each approach and guide the selection of the most suitable approach for a given scenario. This analysis will help readers understand the impact of various factors on the performance of an application and make informed decisions about selecting appropriate algorithms and data structures for processing large datasets.
+
+
 ## The Problem Statement
 The objective of this report is to design and implement an efficient python code to determine the top K most frequent/repeated words in a given dataset (example: K = 10) and present a detailed analysis of the performance through different metrics such as running time, speedup, CPU utilization, memory usage, etc. The report covers the analysis of the code execution on each of the three input data files separately.
 
