@@ -1,8 +1,4 @@
 Top k,Data Structure,File division,Algorithm Approach,Filename,File Size (GB),Chunk Size (MB),Running time (seconds),Memory usage (MB),CPU utilization %
-5,counter,chunks,multithread,data_300MB.txt,0.29,5,0.06,15.02,10.30
-5,counter,chunks,multithread,data_300MB.txt,0.29,10,0.02,15.08,12.50
-5,counter,chunks,multithread,data_300MB.txt,0.29,20,0.01,15.14,66.70
-5,counter,chunks,multithread,data_300MB.txt,0.29,40,0.01,15.14,0.00
 5,counter,chunks,multithread,data_300MB.txt,0.29,5,11.48,462.14,5.80
 5,counter,chunks,multithread,data_300MB.txt,0.29,10,11.55,664.78,7.00
 5,counter,chunks,multithread,data_300MB.txt,0.29,20,11.54,786.53,3.70
