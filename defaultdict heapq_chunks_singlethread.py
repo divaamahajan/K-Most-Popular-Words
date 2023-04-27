@@ -89,11 +89,11 @@ def main():
     # read stop words from file
     stop_words = read_stop_words(log.FILE_STOP_WORDS)
 
-    process_data(filename,stop_words,k)
-    process_data(filename,stop_words,k,log.SIZE_5MB)
+    # process_data(filename,stop_words,k)
+    # process_data(filename,stop_words,k,log.SIZE_5MB)
     process_data(filename,stop_words,k,log.SIZE_10MB)
-    process_data(filename,stop_words,k,log.SIZE_20MB)
-    process_data(filename,stop_words,k,log.SIZE_40MB)
+    # process_data(filename,stop_words,k,log.SIZE_20MB)
+    # process_data(filename,stop_words,k,log.SIZE_40MB)
 
 
 
