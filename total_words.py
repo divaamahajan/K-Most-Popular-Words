@@ -77,13 +77,15 @@ def process_chunk(file_path, chunk_start, chunk_size):
 
 if __name__ == '__main__':
 
-    file_path = "/path/to/your/file"
-    files [ log.FILENAME_50MB , log.FILENAME_300MB, log.FILENAME_2_5GB,log.FILENAME_16GB]
+    file_path = "/Users/rushshah/SCU/BigData/"
+    files = [log.FILENAME_16GB]
+    print(f"{files}")
     for f in files:
       total_count= 0
       file= file_path+f
-      total_count = count_words(file_path)
+      total_count = count_words(file)
       print(f"Total number of words ({f}):", total_count)
+    
 
       
 
