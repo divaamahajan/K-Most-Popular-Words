@@ -55,3 +55,7 @@ Top k,Data Structure,File division,Algorithm Approach,Filename,File Size (GB),Ch
 5,hashmap,file,singlethread,data_300MB.txt,0.29,,9.25,29.67,2.00
 5,hashmap,file,singlethread,data_2.5GB.txt,2.31,,80.58,170.31,1.90
 5,hashmap,file,singlethread,data_16GB.txt,14.34,,510.10,517.83,2.00
+10,counter,chunks,singlethread,small_50MB_dataset.txt,0.04,2.29,1.75,84.73,1.50
+10,defaultdict heapq,chunks,singlethread,data_300MB.txt,0.29,15.09,1.73,293.38,4.70
+10,defaultdict heapq,chunks,singlethread,data_2.5GB.txt,2.31,40,15.67,854.27,3.00
+10,defaultdict heapq,chunks,singlethread,data_16GB.txt,14.34,10,123.72,777.94,3.30

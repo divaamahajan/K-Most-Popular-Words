@@ -957,3 +957,35 @@ CPU utilization:	1.50 %
 
 ************************** END *******************************
 
+**************************************************************                
+Output logs                
+Date:		2023-04-27 13:21:33.135163                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+us                   22806
+would                22235
+countries            20667
+world                19700
+one                  16685
+china                16555
+new                  16103
+economic             16073
+क                    15705
+government           14344
+
+-------------------------------------------------------------
+
+File name:		small_50MB_dataset.txt                
+File Size: 		0.04 GB                
+Chunk Size: 		2.29 MB or 0.00 GB Decided by CPU 
+	 file size 45.83 MB or 0.04 GB /( CPU count 10 * 2)                
+Running time:		1.75 seconds                
+Memory usage:		84.73 MB                
+CPU utilization:	1.50 %
+
+************************** END *******************************
+

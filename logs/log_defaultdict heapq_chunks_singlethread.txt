@@ -1,0 +1,94 @@
+**************************************************************                
+Output logs                
+Date:		2023-04-27 13:25:33.228903                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+european             318829
+mr                   210735
+would                181957
+also                 180186
+commission           172844
+must                 156903
+president            152171
+union                130373
+states               130308
+member               126338
+
+-------------------------------------------------------------
+
+File name:		data_300MB.txt                
+File Size: 		0.29 GB                
+Chunk Size: 		15.09 MB or 0.01 GB Decided by CPU 
+	 file size 301.87 MB or 0.29 GB /( CPU count 10 * 2)                
+Running time:		1.73 seconds                
+Memory usage:		293.38 MB                
+CPU utilization:	4.70 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-27 13:27:07.470321                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+said                 2616266
+one                  949555
+would                917212
+new                  852822
+also                 727934
+last                 700735
+people               688828
+us                   670794
+mr                   659562
+year                 654244
+
+-------------------------------------------------------------
+
+File name:		data_2.5GB.txt                
+File Size: 		2.31 GB                
+Chunk Size: 		40 MB                
+Running time:		15.67 seconds                
+Memory usage:		854.27 MB                
+CPU utilization:	3.00 %
+
+************************** END *******************************
+
+**************************************************************                
+Output logs                
+Date:		2023-04-27 13:48:18.067874                
+**************************************************************
+
+
+Top frequent words:
+
+Word               Count
+said                 16983047
+would                5829171
+one                  5827883
+new                  5619285
+also                 4618289
+us                   4602747
+people               4302104
+last                 4096917
+year                 4011809
+two                  3964153
+
+-------------------------------------------------------------
+
+File name:		data_16GB.txt                
+File Size: 		14.34 GB                
+Chunk Size: 		10 MB                
+Running time:		123.72 seconds                
+Memory usage:		777.94 MB                
+CPU utilization:	3.30 %
+
+************************** END *******************************
+

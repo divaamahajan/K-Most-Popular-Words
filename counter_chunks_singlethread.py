@@ -69,16 +69,16 @@ def process_data(filename, stop_words,top_k, chunk_size=None, ):
 def main():
     # set the number of top words to find
     k = int(input("Enter the number of top words to find: "))
-    filename = log.FILENAME_16GB
+    filename = log.FILENAME_50MB
     # read stop words from file
     stop_words = read_stop_words(log.FILE_STOP_WORDS)
 
     # process the data with different chunk sizes
     process_data(filename, stop_words, k)
-    process_data(filename, stop_words, k, chunk_size=log.SIZE_5MB)
-    process_data(filename, stop_words, k, chunk_size=log.SIZE_100MB)
-    process_data(filename, stop_words, k, chunk_size=log.SIZE_20MB)
-    process_data(filename, stop_words, k, chunk_size=log.SIZE_40MB)
+    # process_data(filename, stop_words, k, chunk_size=log.SIZE_5MB)
+    # process_data(filename, stop_words, k, chunk_size=log.SIZE_100MB)
+    # process_data(filename, stop_words, k, chunk_size=log.SIZE_20MB)
+    # process_data(filename, stop_words, k, chunk_size=log.SIZE_40MB)
 
 
 if __name__ == '__main__':
